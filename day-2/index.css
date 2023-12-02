@@ -1,0 +1,74 @@
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --font-family: 'Karla', sans-serif;
+    --body-bg: #1E1F25;
+    --btn-bg: #000;
+    --btn-size: 1.3em;
+    --btn-color: #cbcbcb;
+    --btn-color-hover: #fff;
+    --grad-color1: #eeaf61;
+    --grad-color2: #fb9062;
+    --grad-color3: #ee5d6c;
+    --grad-color4: #ce4993;
+    --grad-color5: #6a0d83;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--body-bg);
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-border {
+    padding: 3px;
+    background: linear-gradient(
+        115deg, 
+        var(--grad-color1), 
+        var(--grad-color2),
+        var(--grad-color3),
+        var(--grad-color4),
+        var(--grad-color5)
+    );
+}
+
+.button {
+    font-size: var(--btn-size);
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+
+    border: none;
+    width: 210px;
+    height: 66px;
+    letter-spacing: 1.2px;
+
+    transition: all 200ms;
+}
+
+/* During the hover effect */
+.button:hover {
+    color: var(--btn-color-hover);
+    width: 214px;
+    height: 71px;
+}
+
+.button-border:hover {
+    background: linear-gradient(
+        115deg, 
+        var(--grad-color5), 
+        var(--grad-color4),
+        var(--grad-color3),
+        var(--grad-color2),
+        var(--grad-color1)
+    );
+}
