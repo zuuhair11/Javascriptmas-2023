@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Secret Santa</title>
+    </head>
+    <body>
+        <div class="wrap" id="wrap">
+            <div class="card card--inner">
+                <h2>And A Happy New Year!</h2>
+                <img src="https://static.pexels.com/photos/17795/christmas-xmas-christmas-tree-decoration.jpg">
+            </div>
+            <div id='secret-list' class="card card--front back" onclick="openCard();">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Giver</th>
+                            <th>Receiver</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card card--front" onclick="openCard();">
+                <h2>Secret Santa<br>
+                <span class="fancy">
+                    Scrimba 2024
+                </span></p>
+                </h2>
+            </div>
+        </div>
+        
+        <button type="button" id="button">Open Card</button>
+
+        <script src="index.js"></script>
+    </body>
+</html>
