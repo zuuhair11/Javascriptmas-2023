@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <title>My Wishlist</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <h1>My Wishlist</h1>
+
+            <form id="new-wish-form">
+                <input 
+                    type="text"
+                    id="new-wish-input"
+                    placeholder="Tell me your wish, mine is winning a Macbook 💻"
+                />
+                <input 
+                    type="submit"
+                    id="new-wish-submit"
+                    value="Add Wish"
+                />
+            </form>
+        </header>
+
+        <main>
+            <section class="wish-list">
+                <h2>Wishlist</h2>
+
+                <div id="wishs">
+                    <!-- JavaScript goes here -->
+                </div>
+            </section>
+        </main>
+
+        <div class="wishlist"></div>
+        <script type="module" src="index.js"></script>
+    </body>
+</html>
