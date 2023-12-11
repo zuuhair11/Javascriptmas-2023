@@ -1,0 +1,67 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+:root { 
+    --white: #fff;
+    --red: #FF0002;
+    --flag-width: 300px;
+    --flag-height: 300px
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flag {
+    border-radius: 11px;
+    position: relative;
+    width: var(--flag-width);
+    height: var(--flag-height);
+    background-color: var(--red);
+}
+
+.flag-swiss {
+    animation-name: flag-animation;
+    animation-duration: 100ms;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.cross {
+    position: absolute;
+    background-color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cross1 {
+    width: calc(var(--flag-width) * .65);
+    height: calc(var(--flag-height) * .19);
+}
+
+.cross2 {
+    width: calc(var(--flag-width) * .19);
+    height: calc(var(--flag-height) * .65);
+}
+
+
+@keyframes flag-animation {
+    0% {
+        transform: rotate(181deg);
+    }
+
+    /* 50% {
+        transform: rotate(190deg);
+    } */
+
+    100% {
+        transform: rotate(179deg);
+    }
+}
