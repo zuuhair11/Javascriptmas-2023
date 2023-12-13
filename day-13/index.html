@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+        <link rel="stylesheet" href="index.css">
+        <title>Christmas Dinner Calculator</title>
+    </head>
+    <body>
+        <h1>Christmas Dinner Calculator</h1>
+        <p class="result" id="result">Your ideal Christmas dinner is <span id="food">...</span></p>
+        <form>
+            <label for="name">How many guests are coming?</label>
+            <input type="number" id="guests" name="guests">
+            <div class="options">
+                <label>
+                    <input type="radio" id="normal-input" name="optionMeal" value="normal" checked />
+                    🍗
+                </label>
+                <label>
+                    <input type="radio" id="vegetarian-input" name="optionMeal" value="vegetarian" />
+                    🌱
+                </label>
+                <label>
+                    <input type="radio" id="dietary-input" name="optionMeal" value="dietary" />
+                    🥗 
+                </label>
+
+                <!-- Clicking the lable will effect the button -->
+                <!-- <label for="name">Vegetarian?</label> -->
+            </div>
+            <button id="btn" type="button">Calculate</button>
+        </form>
+        <script src="index.js"></script>
+    </body>
+</html>
