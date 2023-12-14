@@ -1,0 +1,121 @@
+:root {
+    --wine-red: #C7375F;
+    --bright-red: #D42D2F;
+    --dark-green: #344D2F;
+    --light-green: #77A047;
+    --gold: #FAC57D;
+    --snow: #F0F4F7;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: var(--dark-green);
+    background-color: var(--snow);
+}
+
+.elf-hangout-zone {
+    /* Limit the number of elves to 6 per row. */
+    /* Make sure that the elves stay in the elf hangout zone, 
+    no matter how many there are. */
+
+    /* 
+    display: flex;
+    justify-content: center;
+    align-items:  center; */
+    display: grid;
+    grid-template-columns: repeat(6, calc(100% / 6));
+    grid-template-rows: repeat(6, calc(100% / 6));
+
+    margin: 2em;
+    min-width: 200px;
+    height: 200px;
+    min-height: 200px;
+    max-width: 5ch;
+    overflow-y: auto;
+    background: var(--wine-red);
+    padding: 1em 2em;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+h1 { 
+    margin: 0;
+}
+
+.actions {
+    text-align: center;
+    margin-right: 1em;
+    min-width: 200px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+.elf {
+    font-size: 30px;
+}
+
+.coffee {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px
+}
+
+button {
+    padding: .5em;
+    border: none;
+    font-size: 1.2rem;
+    background-color: var(--dark-green);
+    color: var(--snow);
+    border-radius: 999px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
+
+
+img {
+    width: 100px;
+    object-fit: cover;
+    position: absolute;
+    filter: blur(2px);
+    z-index: -1;
+    width: 100%;
+}
+
+.santa1 {
+    animation-name: santaAnimation1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    zoom: 20%;
+}
+
+
+@keyframes santaAnimation1 {
+    0% {
+        opacity: .5;
+        margin-right: -9000px;
+    }
+
+    100% {
+        margin-right: 9000px;
+        opacity: 1;
+    }
+}
