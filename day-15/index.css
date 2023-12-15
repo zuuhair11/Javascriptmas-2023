@@ -1,0 +1,61 @@
+:root {
+    --black: #282828; 
+    --blue: #2892f9; 
+    --red: #fb2f27;
+    --yellow: #fdfe29;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.rings {
+    height: 100vh;
+    position: relative;
+}
+
+.ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+
+    border-radius: 50%;
+    animation-name: shrinkRing;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ring-1 {
+    width: 300px;
+    height: 300px;
+    background-color: var(--black);
+}
+
+.ring-2 {
+    width: 220px;
+    height: 220px;
+    background-color: var(--blue);
+}
+
+.ring-3 {
+    width: 150px;
+    height: 150px;
+    background-color: var(--red);
+}
+
+.bullseye {
+    width: 80px;
+    height: 80px;
+    background-color: var(--yellow);
+}
+
+@keyframes shrinkRing {
+    0% {
+        width: 300px;
+        height: 300px;
+    }
+}
