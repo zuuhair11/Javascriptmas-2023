@@ -1,0 +1,66 @@
+:root {
+    --bg-word: #5134ff;
+    --word: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./reindeer.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1 {
+    line-height: 75px;
+    border-width: 10px 0 10px 0;
+    border-style: solid;
+    border-color: var(--bg-word);
+
+    font-family: sans-serif;
+    font-size: 3em;
+}
+
+.container h1::after {
+    content: 'Scrimba';
+    margin-left: 5px;
+    background-color: var(--bg-word);
+    color: var(--word);
+    padding: 12px 11px;
+
+    animation-name: carousel;
+    animation-duration: 6s;
+
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes carousel {
+    25% {
+        content: 'cats';
+    }
+    50% {
+        content: 'coding';
+    }
+    75% {
+        content: 'Leanne';
+    }
+    100% {
+        content: 'Scrimba';
+    }
+}
