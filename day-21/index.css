@@ -1,0 +1,83 @@
+:root {
+    --search-border: #bbb;
+    --search-focus-border: #3a71ca;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 10px;
+    width: 90%;
+}
+
+/* Reset the all the styles from the button */
+.search-bar {
+    appearance: none;
+    outline: none;
+}
+
+.search-bar {
+    padding-left: 5px;
+    width: calc(90% / 3);
+    height: 50px;
+    font-size: 1.3em;
+
+    border: 1px solid var(--search-border);
+    border-radius: 5px;
+
+    transition: width 500ms;
+}
+
+.search-bar:focus {
+    width: 99%;
+    border: 1px solid var(--search-focus-border);
+    box-shadow: 0 0 15px var(--search-focus-border);
+    animation-name: onFocus;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.search-bar:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+
+/* Hides the content on the webpage but is accessible by the screen readers  */
+label { 
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+@keyframes onFocus {
+    0% {
+        box-shadow: 0 0 1px var(--search-focus-border);
+        caret-color: blue;
+    }
+
+    100% {
+        box-shadow: 0 0 20px green;
+    }
+}
